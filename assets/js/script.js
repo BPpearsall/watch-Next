@@ -1,6 +1,7 @@
 
 const posters = document.querySelectorAll('.img') 
 const titles = document.querySelectorAll('.img')
+const ids = document.querySelectorAll('.img')
 
 console.log(posters)
 
@@ -21,6 +22,7 @@ fetch(popularMoviesUrl, {
     console.log(data);
     let posterData = []
     let titleData = []
+    let idData = []
     let allMovies = data.items
     for (let i = 0; i < 15; i++) {
         const movie = allMovies[i];
@@ -28,18 +30,27 @@ fetch(popularMoviesUrl, {
     } 
     for (let i = 0; i < 15; i++) {
       const movie = allMovies[i];
-      titleData.push(movie.title)
+      titleData.push(movie.fullTitle)
     }
+    for (let i = 0; i < 15; i++) {
+      const movie = allMovies[i];
+      idData.push(movie.id)
+    }
+    console.log(idData)
     console.log(titleData)
     console.log(posterData)
-    posterData.forEach((element, i) => posters[i].innerHTML = `<a href = "./movieInfo.html"><img src="${element}"></a>`) 
+    posterData.forEach((element, i) => posters[i].innerHTML = `<a href = "./movieInfo.html?id=${}"><img src="${element}"></a>`) 
     titleData.forEach((element, i) => {
       let movieTitle = document.createElement('h5')
       movieTitle.textContent = element
-      
-      
       titles[i].append(movieTitle)
-    }) 
+    });
+    idData.forEach((element, i) => {
+      let movieId = document.createAttribute('id')
+      movieId.textContent = element
+      ids[i].append(movieId)
+    })
+    
     
 
 
