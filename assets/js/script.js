@@ -20,44 +20,28 @@ fetch(popularMoviesUrl, {
   })
   .then(function (data) {
     console.log(data);
-    let posterData = []
-    let titleData = []
-    let idData = []
+    let movieData = []
     let allMovies = data.items
+    
     for (let i = 0; i < 15; i++) {
-        const movie = allMovies[i];
-        posterData.push(movie.image)
-    } 
-    for (let i = 0; i < 15; i++) {
-      const movie = allMovies[i];
-      titleData.push(movie.fullTitle)
+      movieData.push(data.items[i]);
+      
     }
-    for (let i = 0; i < 15; i++) {
-      const movie = allMovies[i];
-      idData.push(movie.id)
-    }
-    console.log(idData)
-    console.log(titleData)
-    console.log(posterData)
-    posterData.forEach((element, i) => posters[i].innerHTML = `<a href = "./movieInfo.html?id=${}"><img src="${element}"></a>`) 
-    titleData.forEach((element, i) => {
+
+    movieData.forEach((movie, i) => {
+      console.log(movie)
+      posters[i].innerHTML = `<a href = "./movieInfo.html?id=${movie.id}"><img src="${movie.image}"></a>` 
       let movieTitle = document.createElement('h5')
-      movieTitle.textContent = element
+      movieTitle.textContent = movie.fullTitle
       titles[i].append(movieTitle)
     });
-    idData.forEach((element, i) => {
-      let movieId = document.createAttribute('id')
-      movieId.textContent = element
-      ids[i].append(movieId)
-    })
-    
-    
+  
 
 
 
 
+  })
 
-
-  });
+  ;
 
     
