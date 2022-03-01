@@ -4,9 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>WatchNext| Movie Information</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/movieInfo.css">
+  <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+  <script src="https://kit.fontawesome.com/d37a9fd266.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>TEST SITE</h1>
+    <header>
+        <div>
+            <a href="./index.html" class="btn-back">
+              Go Back 
+            </a>
+          </div>
+    </header>
+    <h1>Movie Name</h1>
+    <div class="work-feature-block row">
+        <div class="columns medium-7">
+          <img class="movie img" />
+        </div>
+        <div class="columns medium-5">
+          <h2 class="movieTrailer" href = "https://youtube.com" >Movie Trailer </h2>
+          <img class="work-feature-block-image" src="https://placehold.it/600x400"/>
+          <h2 class="work-feature-block-header">Movie Plot</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales diam ac hendrerit aliquet. Phasellus pretium libero vel molestie maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis est quam. Aenean blandit a urna laoreet tincidunt.</p>
+          <h2>Movie Details</h2>
+          <ul>
+            <li class="title-details">genre</li>
+            <li class="title-details">actors</li>
+            <li class="title-details"> director</li>
+            <li class="title-details"> PG rating</li>
+            <li class="title-details">rating </li>
+            <li class="title-details">runtime </li>
+          </ul>
+          <button type="submit" class="btn">Add to WatchList</button>
+        </div>
+
+
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+  <script src="./assets/js/movieInfo.js"></script>
+
 </body>
 </html>
