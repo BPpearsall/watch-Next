@@ -4,7 +4,7 @@ const titles = document.querySelectorAll('.img')
 
 console.log(posters)
 
-let APIKEY = "k_srm6hq6z"
+let APIKEY = "k_8ges1rmu"
 let popularMoviesUrl = `https://imdb-api.com/en/API/MostPopularMovies/${APIKEY}`
 let searchTerm = ""
 let titleURL = `https://imdb-api.com/en/API/SearchMovie/${APIKEY}/${searchTerm}`
