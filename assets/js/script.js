@@ -22,6 +22,6 @@ fetch("https://imdb-api.com/en/API/MostPopularMovies/k_tgoqrhd7", {
         console.log(posterData)
 
     } 
-    posterData.forEach((element, i) => posters[i].innerHTML = `<img src="${element}">`) 
+    posterData.forEach((element, i) => posters[i].innerHTML = `<a href = "./movieInfo.html"><img src="${element}"></a>`) 
   })
     
