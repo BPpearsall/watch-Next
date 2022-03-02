@@ -8,7 +8,10 @@ const pgRatingEl = document.querySelector('#pg-rating')
 const ratingEl = document.querySelector('#rating')
 const runtimeEl = document.querySelector('#runtime')
 const videoEl = document.querySelector('.ytTrailer')
+let movieNameGlobal = ""
 
+
+let YTAPIKEY = "AIzaSyDhAWmGdli7aV1KD7OXlZjAyOvgnzL9RZk"
 const saveBtn = document.querySelector('.btn')
 
 let watchList = (JSON.parse(localStorage.getItem("movieList")) ? JSON.parse(localStorage.getItem("movieList")) : []);
@@ -19,22 +22,19 @@ let movieId = queryString.split('=')[1];
 let APIKEY = "k_wncu636i"
 let popularMoviesUrl = `https://imdb-api.com/en/API/MostPopularMovies/${APIKEY}`
 let titleSearchUrl = `https://imdb-api.com/en/API/Title/${APIKEY}/${movieId}`
-let youtubeUrl = `https://www.googleapis.com/youtube/v3/search`
 
-// fetch(youtubeUrl, {
+let youtubeUrl = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q
+${movieName}=&key=${YTAPIKEY}`
 
-// })
-// .then(function (response) {
-//     return response.json(); 
-// })
-// .then(function (data) {
-//     videoEl.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+fetch(youtubeUrl, {
 
-// })
-
-// let ytVid = document.createElement("iframe")
-// ytVid.textContent;
-
+})
+.then(function (response) {
+    return response.json(); 
+})
+.then(function (data) {
+    console.log(data.items[0].id.videoId)
+    videoEl.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${data.items[0].id.videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
 
 fetch(titleSearchUrl, {
 
@@ -46,9 +46,11 @@ fetch(titleSearchUrl, {
     console.log(data)
     if (data.originalTitle === '') {
         let movieName = data.title
+        movieNameGlobal = movieName
         movieNameEl.textContent = movieName
     } else {
         let movieName = data.originalTitle
+        movieNameGlobal = movieName
         movieNameEl.textContent = movieName
     }
     
@@ -114,4 +116,5 @@ fetch(titleSearchUrl, {
         watchList.push(movieName)
         window.localStorage.setItem("movieList", JSON.stringify(watchList))
     })
+})
 })
