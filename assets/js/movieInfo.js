@@ -1,5 +1,11 @@
 const posters = document.querySelectorAll('.img') 
 const titles = document.querySelectorAll('.img')
+const genreEl = document.querySelector('#genre')
+const actorsEl = document.querySelector('#actors')
+const directorEl = document.querySelector('#director')
+const pgRatingEl = document.querySelector('#pg-rating')
+const ratingEl = document.querySelector('#rating')
+const runtimeEl = document.querySelector('#runtime')
 
 console.log(posters)
 
