@@ -2,9 +2,8 @@ const posters = document.querySelectorAll(".img");
 const titles = document.querySelectorAll(".img");
 const ids = document.querySelectorAll(".img");
 
-console.log(posters);
 
-let APIKEY = "k_8ges1rmu";
+let APIKEY = "k_tgoqrhd7";
 let popularMoviesUrl = `https://imdb-api.com/en/API/MostPopularMovies/${APIKEY}`;
 let searchTerm = "";
 let titleURL = `https://imdb-api.com/en/API/SearchMovie/${APIKEY}/${searchTerm}`;
@@ -18,7 +17,6 @@ fetch(popularMoviesUrl, {
     return response.json();
   })
   .then(function (data) {
-    console.log(data);
     let movieData = [];
     let allMovies = data.items;
 
@@ -27,7 +25,6 @@ fetch(popularMoviesUrl, {
     }
 
     movieData.forEach((movie, i) => {
-      console.log(movie);
       posters[
         i
       ].innerHTML = `<a href = "./movieInfo.html?id=${movie.id}"><img src="${movie.image}"></a>`;
