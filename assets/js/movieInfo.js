@@ -9,3 +9,13 @@ let APIKEY = "k_srm6hq6z"
 let popularMoviesUrl = `https://imdb-api.com/en/API/MostPopularMovies/${APIKEY}`
 let titleSearchUrl = `https://imdb-api.com/en/API/Title/${APIKEY}/${movieId}`
 
+fetch(titleSearchUrl, {
+
+})
+.then(function (response) {
+    return response.json();
+})
+.then(function (data) {
+    console.log(data)
+    let movieInfo = []
+})
