@@ -25,107 +25,111 @@ let titleSearchUrl = `https://imdb-api.com/en/API/Title/${APIKEY}/${movieId}`
 
 let youtubeUrl = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=&key=${YTAPIKEY}`
 
+
 function getYTApi(movieNameGlobal) {
-    
+    fetch(youtubeUrl, {
 
-
-fetch(youtubeUrl, {
-
-})
-    .then(function (response) {
-        return response.json();
     })
-    .then(function (data) {
-        console.log(data.items[0].id.videoId)
-        videoEl.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${data.items[0].id.videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
-    })
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data.items[0].id.videoId)
+            videoEl.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${data.items[0].id.videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+        })
 }
 
+function createList() {
+    let newMovies = JSON.parse(localStorage.getItem("movieList"))
+    if (newMovies !== null) {
+        document.createElement
+    }
+    
+}
 
 function getImdbApi(movieNameGlobal) {
-    
+    fetch(titleSearchUrl, {
 
-fetch(titleSearchUrl, {
-
-})
-    .then(function (response) {
-        return response.json();
     })
-    .then(function (data) {
-        console.log(data)
-        if (data.originalTitle === '') {
-            let movieName = data.title
-            movieNameGlobal = movieName
-            movieNameEl.textContent = movieName
-        } else {
-            let movieName = data.originalTitle
-            movieNameGlobal = movieName
-            movieNameEl.textContent = movieName
-        }
-
-
-        if (data.image === null || '') {
-            movieImgEl.innerHTML = `<p>No Information Given.</p>`
-        } else {
-            let movieImg = data.image
-            movieImgEl.innerHTML = `<img src="${movieImg}">`
-        }
-
-        if (data.plot === null || '') {
-            moviePlotEl.textContent = "No Information Given"
-        } else {
-            let moviePlot = data.plot
-            moviePlotEl.textContent = moviePlot
-        }
-
-        if (data.genres === null || '') {
-            genre.textContent = "No Information Given."
-        } else {
-            let genre = data.genres
-            genreEl.textContent = genre
-        }
-
-        if (data.stars === null || '') {
-            actorsEl.textContent = "No Information Given."
-        } else {
-            let actors = data.stars
-            actorsEl.textContent = actors
-        }
-
-        if (data.directors === null || '') {
-            directorEl.textContent = "No Information Given."
-        } else {
-            let director = data.directors
-            directorEl.textContent = director
-        }
-
-        if (data.contentRating === null || '') {
-            pgRatingEl.textContent = "No Information Given."
-        } else {
-            let pgRating = data.contentRating
-            pgRatingEl.textContent = pgRating
-        }
-
-        if (data.imDbRating === null || '') {
-            ratingEl.textContent = "No Information Given."
-        } else {
-            let rating = data.imDbRating
-            ratingEl.textContent = rating
-        }
-
-        if (data.runtimeStr === null || '') {
-            runtimeEl.textContent = "No Information Given."
-        } else {
-            let runtime = data.runtimeStr
-            runtimeEl.textContent = runtime
-        }
-
-        saveBtn.addEventListener("click", function () {
-            let movieName = movieNameEl.textContent
-            watchList.push(movieName)
-            window.localStorage.setItem("movieList", JSON.stringify(watchList))
+        .then(function (response) {
+            return response.json();
         })
-    })
+        .then(function (data) {
+            console.log(data)
+            if (data.originalTitle === '') {
+                let movieName = data.title
+                movieNameGlobal = movieName
+                movieNameEl.textContent = movieName
+            } else {
+                let movieName = data.originalTitle
+                movieNameGlobal = movieName
+                movieNameEl.textContent = movieName
+            }
+
+
+            if (data.image === null || '') {
+                movieImgEl.innerHTML = `<p>No Information Given.</p>`
+            } else {
+                let movieImg = data.image
+                movieImgEl.innerHTML = `<img src="${movieImg}">`
+            }
+
+            if (data.plot === null || '') {
+                moviePlotEl.textContent = "No Information Given"
+            } else {
+                let moviePlot = data.plot
+                moviePlotEl.textContent = moviePlot
+            }
+
+            if (data.genres === null || '') {
+                genre.textContent = "No Information Given."
+            } else {
+                let genre = data.genres
+                genreEl.textContent = genre
+            }
+
+            if (data.stars === null || '') {
+                actorsEl.textContent = "No Information Given."
+            } else {
+                let actors = data.stars
+                actorsEl.textContent = actors
+            }
+
+            if (data.directors === null || '') {
+                directorEl.textContent = "No Information Given."
+            } else {
+                let director = data.directors
+                directorEl.textContent = director
+            }
+
+            if (data.contentRating === null || '') {
+                pgRatingEl.textContent = "No Information Given."
+            } else {
+                let pgRating = data.contentRating
+                pgRatingEl.textContent = pgRating
+            }
+
+            if (data.imDbRating === null || '') {
+                ratingEl.textContent = "No Information Given."
+            } else {
+                let rating = data.imDbRating
+                ratingEl.textContent = rating
+            }
+
+            if (data.runtimeStr === null || '') {
+                runtimeEl.textContent = "No Information Given."
+            } else {
+                let runtime = data.runtimeStr
+                runtimeEl.textContent = runtime
+            }
+
+            saveBtn.addEventListener("click", function () {
+                let movieName = movieNameEl.textContent
+                watchList.push(movieName)
+                window.localStorage.setItem("movieList", JSON.stringify(watchList))
+                createList()
+            })
+        })
 
     getYTApi()
 }
