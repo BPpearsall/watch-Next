@@ -11,30 +11,25 @@ const ratingEl = document.querySelector('#rating')
 const runtimeEl = document.querySelector('#runtime')
 const videoEl = document.querySelector('.ytTrailer')
 
-
-console.log(posters)
-
+let YTAPIKEY = "AIzaSyDhAWmGdli7aV1KD7OXlZjAyOvgnzL9RZk"
 let queryString = document.location.search;
 let movieId = queryString.split('=')[1];
-let APIKEY = "k_srm6hq6z"
+let APIKEY = "k_tgoqrhd7"
 let popularMoviesUrl = `https://imdb-api.com/en/API/MostPopularMovies/${APIKEY}`
 let titleSearchUrl = `https://imdb-api.com/en/API/Title/${APIKEY}/${movieId}`
-let youtubeUrl = `https://www.googleapis.com/youtube/v3/search`
+let youtubeUrl = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=&key=${YTAPIKEY}`
 
-fetch(titleSearchUrl, {
+fetch(youtubeUrl, {
 
 })
 .then(function (response) {
     return response.json(); 
 })
 .then(function (data) {
-    videoEl.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+    console.log(data.items[0].id.videoId)
+    videoEl.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${data.items[0].id.videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
 
 })
-
-let ytVid = document.createElement("iframe")
-ytVid.textContent;
-
 
 fetch(titleSearchUrl, {
 
