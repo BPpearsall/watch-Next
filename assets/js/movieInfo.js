@@ -14,6 +14,9 @@ let movieNameGlobal = ""
 let YTAPIKEY = "AIzaSyDhAWmGdli7aV1KD7OXlZjAyOvgnzL9RZk"
 const saveBtn = document.querySelector('.btn')
 
+let watchList = (JSON.parse(localStorage.getItem("movieList")) ? JSON.parse(localStorage.getItem("movieList")) : []);
+
+
 let queryString = document.location.search;
 let movieId = queryString.split('=')[1];
 let APIKEY = "k_wncu636i"
@@ -109,7 +112,9 @@ fetch(titleSearchUrl, {
     }
     
     saveBtn.addEventListener("click", function(){
-        localStorage.setItem("movielist", movieName)
+        let movieName = movieNameEl.textContent
+        watchList.push(movieName)
+        window.localStorage.setItem("movieList", JSON.stringify(watchList))
     })
 })
 })
