@@ -1,11 +1,15 @@
 const posters = document.querySelectorAll('.img') 
 const titles = document.querySelectorAll('.img')
+
+const movieImgEl = document.querySelector('#movieImg')
+const moviePlotEl = document.querySelector('#moviePlot')
 const genreEl = document.querySelector('#genre')
 const actorsEl = document.querySelector('#actors')
 const directorEl = document.querySelector('#director')
 const pgRatingEl = document.querySelector('#pg-rating')
 const ratingEl = document.querySelector('#rating')
 const runtimeEl = document.querySelector('#runtime')
+
 
 console.log(posters)
 
@@ -23,5 +27,18 @@ fetch(titleSearchUrl, {
 })
 .then(function (data) {
     console.log(data)
-    let movieInfo = []
+    let movieImg = data.image
+    movieImgEl.innerHTML = `<img src="${movieImg}">`
+    let genre = data.genres
+    genreEl.textContent = genre
+    let actors = data.stars
+    actorsEl.textContent = actors
+    let director = data.directors
+    directorEl.textContent = director
+    let pgRating = data.contentRating
+    pgRatingEl.textContent = pgRating
+    let rating = data.imDbRating
+    ratingEl.textContent = rating
+    let runtime = data.runtimeStr
+    runtimeEl.textContent = runtime
 })
