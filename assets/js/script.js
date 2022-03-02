@@ -2,7 +2,7 @@ const posters = document.querySelectorAll(".img");
 const titles = document.querySelectorAll(".img");
 const ids = document.querySelectorAll(".img");
 
-let APIKEY = "k_srm6hq6z"
+let APIKEY = "k_tgoqrhd7"
 let popularMoviesUrl = `https://imdb-api.com/en/API/MostPopularMovies/${APIKEY}`
 
 fetch(popularMoviesUrl, {
