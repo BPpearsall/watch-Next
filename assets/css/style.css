@@ -36,7 +36,9 @@ body {
   margin-left: 1rem;
 }
 h5 {
+  font-size: 30px;
   text-align: center;
+  padding-bottom: 5px;
 }
 .customBody {
   background-color: var(--main);
