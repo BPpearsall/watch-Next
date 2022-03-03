@@ -32,7 +32,7 @@ let watchQueue = JSON.parse(localStorage.getItem("movieList"));
 for (let i = 0; i < watchQueue.length; i++) {
   $(".watchLater").append(
     "<li>" +
-      '<button type="button" class="alert button removeMovie">' +
+      '<button type="button" class="clear button alert removeMovie">' +
       watchQueue[i] +
       "</button>" +
       "</li>"

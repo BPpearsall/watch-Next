@@ -16,6 +16,17 @@
   align-items: flex-end;
 }
 
+.row {
+  min-width: 100%;
+}
+
+img {
+  min-width: 478.59px;
+  max-width: 478.59px;
+  min-height: 689.61px;
+  max-height: 689.61px;
+}
+
 body {
   font-family: "Roboto Condensed", sans-serif;
   display: grid;
@@ -29,6 +40,7 @@ h5 {
 }
 .customBody {
   background-color: var(--main);
+  color: var(--text);
 }
 .customText {
   color: var(--text);
@@ -36,3 +48,4 @@ h5 {
 .customSec {
   color: var(--textSec);
 }
+
