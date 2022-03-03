@@ -32,7 +32,6 @@ fetch(popularMoviesUrl, {
   for (let i = 0; i < watchQueue.length; i++) {
     $('.watchLater').append('<li>' + '<a class="small button" href="#0">' + watchQueue[i] + '</a>' + '</li>')
   }
-  h5.classList.add("text-center")
 
 
 
