@@ -9,7 +9,6 @@ const ratingEl = document.querySelector("#rating");
 const runtimeEl = document.querySelector("#runtime");
 const videoEl = document.querySelector(".ytTrailer");
 
-
 let YTAPIKEY = "AIzaSyDhAWmGdli7aV1KD7OXlZjAyOvgnzL9RZk";
 const saveBtn = document.querySelector(".button");
 
@@ -114,5 +113,3 @@ fetch(titleSearchUrl, {})
         videoEl.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${data.items[0].id.videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
       });
   });
-
-  

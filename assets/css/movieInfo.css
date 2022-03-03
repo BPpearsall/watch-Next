@@ -1,8 +1,8 @@
-:root{
+:root {
   --main: #262626;
   --text: #c9c9c9;
   --textSec: #f1f1f1;
-  --highLight: #2E4159;
+  --highLight: #2e4159;
 }
 
 .work-feature-block {
@@ -19,12 +19,12 @@
 .btn-back {
   margin: 4rem;
 }
-.customBody{
+.customBody {
   background-color: var(--main);
 }
-.customText{
+.customText {
   color: var(--text);
 }
-.customSec{
+.customSec {
   color: var(--textSec);
 }
