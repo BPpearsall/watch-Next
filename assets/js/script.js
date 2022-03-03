@@ -2,7 +2,7 @@ const posters = document.querySelectorAll(".img");
 const titles = document.querySelectorAll(".img");
 const ids = document.querySelectorAll(".img");
 
-let APIKEY = "k_wncu636i"
+let APIKEY = "k_srm6hq6z"
 let popularMoviesUrl = `https://imdb-api.com/en/API/MostPopularMovies/${APIKEY}`
 
 fetch(popularMoviesUrl, {
@@ -25,3 +25,12 @@ fetch(popularMoviesUrl, {
       titles[i].append(movieTitle);
     });
   });
+
+
+  let watchQueue = JSON.parse(localStorage.getItem("movieList"))
+  for (let i = 0; i < watchQueue.length; i++) {
+    $('.watchLater').append('<li>' + '<button type="button" class="alert button">' + watchQueue[i] + '</button>' + '</li>')
+  }
+
+
+
