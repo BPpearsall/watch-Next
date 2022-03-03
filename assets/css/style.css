@@ -15,5 +15,8 @@ body {
 }
 
 #watchLater li {
-  margin-left: 10px;
+  margin-left: 1rem;
+}
+h5{
+  text-align: center;
 }
