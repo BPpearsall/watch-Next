@@ -1,7 +1,14 @@
+:root {
+  --main: #262626;
+  --text: #c9c9c9;
+  --textSec: #f1f1f1;
+  --highLight: #2e4159;
+}
+
 .work-feature-block {
   padding: 10px 0;
-  border-top: 1px solid #cacaca;
-  border-bottom: 1px solid #cacaca;
+  border-top: 4px solid var(--highLight);
+  border-bottom: 4px solid var(--highLight);
 }
 
 .work-feature-block-image {
@@ -11,4 +18,13 @@
 }
 .btn-back {
   margin: 4rem;
+}
+.customBody {
+  background-color: var(--main);
+}
+.customText {
+  color: var(--text);
+}
+.customSec {
+  color: var(--textSec);
 }

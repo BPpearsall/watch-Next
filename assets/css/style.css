@@ -3,6 +3,13 @@
   padding: 0;
 }
 
+:root {
+  --main: #262626;
+  --text: #c9c9c9;
+  --textSec: #f1f1f1;
+  --highLight: #2e4159;
+}
+
 #CustomHeader {
   display: flex;
   justify-content: end;
@@ -17,6 +24,15 @@ body {
 #watchLater li {
   margin-left: 1rem;
 }
-h5{
+h5 {
   text-align: center;
+}
+.customBody {
+  background-color: var(--main);
+}
+.customText {
+  color: var(--text);
+}
+.customSec {
+  color: var(--textSec);
 }
