@@ -1,61 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WatchNext</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WatchNext</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/movieInfo.css">
   <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
   <script src="https://kit.fontawesome.com/d37a9fd266.js" crossorigin="anonymous"></script>
 </head>
+
 <body class="customBody">
-    <header>
-        <div>
-          <a class="expanded button" href="./index.html"><i class="fa-solid fa-house fa-xl"></i>  Home
+  <header>
+    <div>
+      <a class="expanded button" href="./index.html"><i class="fa-solid fa-house fa-xl"></i> Home
+      </a>
+    </div>
+  </header>
+  <h1 class="customText text-center" id="movie-name">Movie Name</h1>
+  <div class="work-feature-block row">
+    <div class="columns medium-7">
+      <div id="movieImg">
 
-            
-              
-            </a>
-          </div>
-    </header>
-    <h1 class="customText text-center" id="movie-name">Movie Name</h1>
-    <div class="work-feature-block row">
-        <div class="columns medium-7">
-          <div id="movieImg">
+      </div>
+    </div>
+    <div class="columns medium-5">
+      <h2 class="customText movieTrailer" href="https://youtube.com">Movie Trailer </h2>
+      <div class="ytTrailer">
 
-          </div>
-        </div>
-        <div class="columns medium-5">
-          <h2 class="customText movieTrailer" href = "https://youtube.com" >Movie Trailer </h2>
-          <!-- youtube embed link will go here -->
-            <div class="ytTrailer">
-            
-            </div>
-          <h2 class="customText work-feature-block-header">Movie Plot</h2>
-          <p class="customSec" id="moviePlot">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sodales diam ac hendrerit aliquet. Phasellus pretium libero vel molestie maximus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis est quam. Aenean blandit a urna laoreet tincidunt.</p>
-          <h2 class="customText">Movie Details</h2>
-          <ul>
-            <li class="customSec title-details">Genre: <span id="genre"></span></li>
-            <li class="customSec title-details">Actors: <span id="actors"></span> </li>
-            <li class="customSec title-details">Director: <span id="director"></span> </li>
-            <li class="customSec title-details">PG Rating: <span id="pg-rating"></span> </li>
-            <li class="customSec title-details">Rating: <span id="rating"></span> </li>
-            <li class="customSec title-details">Runtime: <span id="runtime"></span> </li>
-          </ul>
-          <button type="submit" class="expan button"><i class="fa-solid fa-book"></i>  Add to WatchList </button>
-        </div>
+      </div>
+      <button type="button" class="collapsible">Movie plot</button>
+      <div class="content">
+      <p class="customSec" id="moviePlot"></p>
+      </div>
+      
+      <h2 class="customText">Movie Details</h2>
+      <ul>
+        <li class="customSec title-details">Genre: <span id="genre"></span></li>
+        <li class="customSec title-details">Actors: <span id="actors"></span> </li>
+        <li class="customSec title-details">Director: <span id="director"></span> </li>
+        <li class="customSec title-details">PG Rating: <span id="pg-rating"></span> </li>
+        <li class="customSec title-details">Rating: <span id="rating"></span> </li>
+        <li class="customSec title-details">Runtime: <span id="runtime"></span> </li>
+      </ul>
+      <button type="submit" class="expan button"><i class="fa-solid fa-book"></i> Add to WatchList </button>
+    </div>
 
-
-  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
-  <script>
-    $(document).foundation();
-  </script>
-  <script src="./assets/js/movieInfo.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+    <script src="./assets/js/movieInfo.js"></script>
 
 </body>
+
 </html>
