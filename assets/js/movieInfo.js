@@ -11,7 +11,7 @@ const videoEl = document.querySelector(".ytTrailer");
 
 
 let YTAPIKEY = "AIzaSyDhAWmGdli7aV1KD7OXlZjAyOvgnzL9RZk";
-const saveBtn = document.querySelector(".btn");
+const saveBtn = document.querySelector(".button");
 
 let watchList = JSON.parse(localStorage.getItem("movieList"))
   ? JSON.parse(localStorage.getItem("movieList"))
@@ -19,7 +19,7 @@ let watchList = JSON.parse(localStorage.getItem("movieList"))
 
 let queryString = document.location.search;
 let movieId = queryString.split("=")[1];
-let APIKEY = "k_tgoqrhd7";
+let APIKEY = "k_wncu636i";
 let popularMoviesUrl = `https://imdb-api.com/en/API/MostPopularMovies/${APIKEY}`;
 let titleSearchUrl = `https://imdb-api.com/en/API/Title/${APIKEY}/${movieId}`;
 
@@ -28,7 +28,6 @@ fetch(titleSearchUrl, {})
     return response.json();
   })
   .then(function (data) {
-    console.log(data);
     if (data.originalTitle === "") {
       let movieName = data.title;
       movieNameGlobal = movieName;
