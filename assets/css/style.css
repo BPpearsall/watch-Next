@@ -20,8 +20,14 @@
   min-width: 100%;
 }
 
+.img {
+  border-top: 5px solid black;
+  padding-top: 15px;
+}
+
 img {
-  padding-bottom: 10px;
+  max-height: 689.61px;
+  max-width: 100%;
 }
 
 body {
@@ -41,6 +47,11 @@ h5 {
   background-color: var(--main);
   color: var(--text);
 }
+
+.titlepadding {
+  padding: 2% 0;
+}
+
 .customText {
   color: var(--text);
 }
