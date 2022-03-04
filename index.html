@@ -15,20 +15,25 @@
 
 <body>
 
+
+  <!-- Upper level div allows for the watch-List to have hideable functionality -->
   <div class="off-canvas-wrapper">
     <div class="off-canvas-wrapper-inner " data-off-canvas-wrapper>
 
+      <!-- Sets the container that will store all of the locallystored watchList items -->
       <div class="off-canvas position-left" id="my-info" data-off-canvas data-position="left">
         <div class="row column">
           <br>
 
           <h5 class="customH5"><i class="fa-solid fa-clock fa-lg"></i> Watch Later</h5>
+          <!-- empty ordered list for the Watch Later container to be filled by local storage -->
           <ol class="watchLater">
             
           </ol>
         </div>
       </div>
 
+      <!-- Adds functionality to the watchlist button that shows and hides the watch later container -->
       <div class="off-canvas-content" data-off-canvas-content>
         <div class="title-bar">
           <div class="title-bar-left">
@@ -42,60 +47,45 @@
             
           </div>
         </div>
+        <!-- Sets the amount of movieposters that will be displayed in a row depending on resolution -->
         <div class="row small-up-1 medium-up-3 large-up-5 customBody">
+          <!-- Each div houses the specific a href img tag and title supplied by script.js -->
           <div class="column img">
-
           </div>
           <div class="column img">
-            <div class="title"></div>
           </div>
           <div class="column img">
-            <div class="title"></div>
           </div>
           <div class="column img">
-            <div class="title"></div>
           </div>
           <div class="column img">
-            <div class="title"></div>
           </div>
           <div class="column img">
-            <div class="title"></div>
           </div>
           <div class="column img">
-            <div class="title"></div>
           </div>
           <div class="column img">
-            <div class="title"></div>
           </div>
           <div class="column img">
-            <div class="title"></div>
           </div>
           <div class="column img">
-            <div class="title"></div>
           </div>
           <div class="column img">
-            <div class="title"></div>
           </div>
           <div class="column img">
-            <div class="title"></div>
           </div>
           <div class="column img">
-            <div class="title"></div>
           </div>
           <div class="column img">
-            <div class="title"></div>
           </div>
           <div class="column img">
-            <div class="title"></div>
           </div>
         </div>
-        <hr>
-      
       </div>
     </div>
   </div>
   </div>
-
+<!-- Javascript and Jquery functionality -->
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
   <script>
