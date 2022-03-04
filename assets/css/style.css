@@ -1,8 +1,10 @@
+/* Universal styling */
 * {
   margin: 0;
   padding: 0;
 }
 
+/* defines root variables for consistent coloring */
 :root {
   --main: #262626;
   --text: #c9c9c9;
@@ -10,60 +12,55 @@
   --highLight: #2e4159;
 }
 
+/* styling for the WatchNext logo to place it in the center of the header */
 #CustomHeader {
   display: flex;
   justify-content: end;
   align-items: flex-end;
 }
 
+/* forces the movie posters row to occupy 100% of the width of the screen*/
 .row {
   min-width: 100%;
 }
 
+/* Adds a border to the top of each row to help the user understand which movie titles goes with a poster */
 .img {
   border-top: 5px solid black;
   padding-top: 15px;
 }
 
+/* Forces all images to share the same height the largest resolution */
 img {
   max-height: 689.61px;
   max-width: 100%;
 }
 
+/* sets font family and display for the body */
 body {
   font-family: "Roboto Condensed", sans-serif;
   display: grid;
 }
 
+/* pushes the watch-list off the far left side of the screen */
 #watchLater li {
   margin-left: 1rem;
 }
+
+/* adjusts the font size and spacing for each of the movie titles */
 h5 {
   font-size: 30px;
   text-align: center;
   padding-bottom: 20px;
 }
+
+/* adds background color and text color to the main body of the page */
 .customBody {
   background-color: var(--main);
   color: var(--text);
 }
 
+ /* makes the WatchNext header have some slight padding to seperate it from the main body */
 .titlepadding {
   padding: 2% 0;
-}
-
-.customText {
-  color: var(--text);
-}
-.customSec {
-  color: var(--textSec);
-}
-.webHeader {
-  border-bottom: 1.5rem solid var(--main);
-  background-color: var(--highLight);
-  color: var(--textSec);
-}
-.img{
-  
-
 }
