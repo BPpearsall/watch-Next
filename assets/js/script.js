@@ -50,7 +50,6 @@ for (let i = 0; i < watchQueue.length; i++) {
 }
 // Function that allows the user to remove a specific movie from the watchlist onclick. removes both the button and the item from local storage
 function handleDeleteMovie(event) {
-  console.log(event.target);
   let movieList = JSON.parse(localStorage.getItem("movieList"));
   let movie = event.target.textContent;
 
