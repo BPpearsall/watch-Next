@@ -10,7 +10,7 @@
 
 
 
-# DEMO(footage form beta)
+# DEMO(footage from beta)
 ![Gif of working site](https://media.giphy.com/media/YEvofUum1bdNIxnxDz/giphy.gif)
 
 # Bulit with
