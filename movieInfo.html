@@ -17,27 +17,33 @@
 <body class="customBody">
   <header>
     <div>
+      <!-- Button to return the user back to the home page -->
       <a class="expanded button" href="./index.html"><i class="fa-solid fa-house fa-xl"></i> Home
       </a>
     </div>
   </header>
+  <!-- custom classes for the title of the movie -->
   <h1 class="customText text-center" id="movie-name">Movie Name</h1>
+  <!-- class for the template used -->
   <div class="work-feature-block row">
     <div class="columns medium-7">
+      <!-- div for the movie poster -->
       <div id="movieImg">
 
       </div>
     </div>
     <div class="columns medium-5">
       <h2 class="customText movieTrailer" href="https://youtube.com">Movie Trailer </h2>
+      <!-- div for the youtube trailer -->
       <div class="ytTrailer">
 
       </div>
+      <!-- button that opens collapsible plot -->
       <button type="button" class="collapsible">Movie plot <i class="fa-solid fa-plus"></i></button>
       <div class="content">
       <p class="customSec" id="moviePlot"></p>
       </div>
-      
+      <!-- list for movie details -->
       <h2 class="customText">Movie Details</h2>
       <ul>
         <li class="customSec title-details">Genre: <span id="genre"></span></li>
@@ -53,6 +59,7 @@
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
     <script>
+      // calls foundation on the document
       $(document).foundation();
     </script>
     <script src="./assets/js/movieInfo.js"></script>

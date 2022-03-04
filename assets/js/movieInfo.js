@@ -9,6 +9,7 @@ const ratingEl = document.querySelector("#rating");
 const runtimeEl = document.querySelector("#runtime");
 const videoEl = document.querySelector(".ytTrailer");
 
+// variable for youtube API key
 let YTAPIKEY = "AIzaSyDhAWmGdli7aV1KD7OXlZjAyOvgnzL9RZk";
 const saveBtn = document.querySelector(".button");
 
@@ -102,25 +103,22 @@ fetch(titleSearchUrl, {})
     movieNoSpace = movieNoSpace.split(" ").join("");
 
     let youtubeUrl = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=${movieNoSpace}%20trailer=&key=${YTAPIKEY}`;
-    console.log(movieNameEl.textContent);
-    console.log(youtubeUrl);
     fetch(youtubeUrl, {})
       .then(function (response) {
         return response.json();
       })
       .then(function (data) {
-        console.log(data.items[0].id.videoId);
         videoEl.innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/${data.items[0].id.videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
       });
   });
   
-var collapsibleMenu = document.getElementsByClassName("collapsible");
-var i;
+let collapsibleMenu = document.getElementsByClassName("collapsible");
+let i;
 
 for (i = 0; i < collapsibleMenu.length; i++) {
   collapsibleMenu[i].addEventListener("click", function() {
     this.classList.toggle("active");
-    var content = this.nextElementSibling;
+    let content = this.nextElementSibling;
     if (content.style.display === "block") {
       content.style.display = "none";
     } else {
