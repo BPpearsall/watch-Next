@@ -21,10 +21,7 @@
 }
 
 img {
-  min-width: 99%;
-  max-width: 99%;
-  min-height: 689.61px;
-  max-height: 689.61px;
+  padding-bottom: 10px;
 }
 
 body {
@@ -38,7 +35,7 @@ body {
 h5 {
   font-size: 30px;
   text-align: center;
-  padding-bottom: 5px;
+  padding-bottom: 20px;
 }
 .customBody {
   background-color: var(--main);
@@ -50,4 +47,12 @@ h5 {
 .customSec {
   color: var(--textSec);
 }
+.webHeader {
+  border-bottom: 1.5rem solid var(--main);
+  background-color: var(--highLight);
+  color: var(--textSec);
+}
+.img{
+  
 
+}
