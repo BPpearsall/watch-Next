@@ -8,6 +8,7 @@ const pgRatingEl = document.querySelector("#pg-rating");
 const ratingEl = document.querySelector("#rating");
 const runtimeEl = document.querySelector("#runtime");
 const videoEl = document.querySelector(".ytTrailer");
+const tabName = document.querySelector(".tabTitle")
 
 // variable for youtube API key
 let YTAPIKEY = "AIzaSyDhAWmGdli7aV1KD7OXlZjAyOvgnzL9RZk";
@@ -32,6 +33,7 @@ fetch(titleSearchUrl, {})
       let movieName = data.title;
       movieNameGlobal = movieName;
       movieNameEl.textContent = movieName;
+      tabName.textContent= `${movieName} | WatchNext "`
     } else {
       let movieName = data.originalTitle;
       movieNameGlobal = movieName;
