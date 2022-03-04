@@ -58,4 +58,12 @@ h5 {
 .customSec {
   color: var(--textSec);
 }
+.webHeader {
+  border-bottom: 1.5rem solid var(--main);
+  background-color: var(--highLight);
+  color: var(--textSec);
+}
+.img{
+  
 
+}
