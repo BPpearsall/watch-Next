@@ -10,7 +10,7 @@ k_srm6hq6z - Blake
 */
 
 // set global api key and popularmovies variable
-let APIKEY = "k_8ges1rmu";
+let APIKEY = "k_wncu636i";
 let popularMoviesUrl = `https://imdb-api.com/en/API/MostPopularMovies/${APIKEY}`;
 
 
