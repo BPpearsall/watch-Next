@@ -40,7 +40,6 @@ for (let i = 0; i < watchQueue.length; i++) {
 }
 
 function handleDeleteMovie(event) {
-  console.log(event.target);
   let movieList = JSON.parse(localStorage.getItem("movieList"));
   let movie = event.target.textContent;
 
