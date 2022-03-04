@@ -15,7 +15,7 @@ I can save it to a watch list.
 
 
 
-# DEMO
+# DEMO(footage form beta)
 ![Gif of working site](https://media.giphy.com/media/YEvofUum1bdNIxnxDz/giphy.gif)
 
 [![Open in Visual Studio Code](https://img.shields.io/badge/WatchNext-Vist-brightgreen)](https://github.com/BPpearsall/watch-Next)
