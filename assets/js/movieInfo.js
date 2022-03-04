@@ -18,7 +18,7 @@ let watchList = JSON.parse(localStorage.getItem("movieList"))
 
 let queryString = document.location.search;
 let movieId = queryString.split("=")[1];
-let APIKEY = "k_wncu636i";
+let APIKEY = "k_8ges1rmu";
 let popularMoviesUrl = `https://imdb-api.com/en/API/MostPopularMovies/${APIKEY}`;
 let titleSearchUrl = `https://imdb-api.com/en/API/Title/${APIKEY}/${movieId}`;
 
