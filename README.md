@@ -1,6 +1,6 @@
 
 # WatchNext 
-### WatchNext is a website where you can find the current top 15 movies and view all kinds of information about them. Our website allows the user to save the name of any movie that piques there interest and save it for later. 
+### WatchNext is a website where you can find the current top 15 movies and view all kinds of information about them. Our website allows the user to save the name of any movie that piques their interest and save it for later. 
 
 # How to use WatchNext
 ### 1. Once you are loaded into site you will find the top 15 movies of the day
@@ -13,7 +13,7 @@
 # DEMO(footage from beta)
 ![Gif of working site](https://media.giphy.com/media/YEvofUum1bdNIxnxDz/giphy.gif)
 
-# Bulit with
+# Built with
 [JavaScript](https://www.javascript.com/)<br>
 [CSS](https://en.wikipedia.org/wiki/CSS)<br>
 [HTML](https://en.wikipedia.org/wiki/HTML)<br>
@@ -23,7 +23,7 @@
 [fontawesome](https://fontawesome.com/)<br>
 [IMDb-API](https://imdb-api.com/)<br>
 [Youtube-API](https://developers.google.com/youtube/v3)
-# links
+# Links
 [![git hub link](https://img.shields.io/badge/WatchNext-Vist-brightgreen)](https://bppearsall.github.io/watch-Next/)<br>
 [![page link](https://img.shields.io/badge/GitHub-Vist-blue)](https://github.com/BPpearsall/watch-Next)
 # Contributors
